@@ -1,0 +1,22 @@
+comments:
+  # (*) REQUIRED
+  allowedFields: ["name", "email", "url", "message", "replyto", "codeword"]
+  branch: "master"
+  filename: "{fields.replyto}entry{@timestamp}"
+  path: "_data/comments/{options.slug}"
+    
+  # (*) OPTIONAL?
+  commitMessage: "Add Staticman comment from {fields.name} at {fields.url}"
+  format: "yaml"
+  allowedOrigins: ["kiwichat.ml"]
+  bannedDomains: ["https://bit.ly"]
+  generatedFields:
+    date:
+      type: date
+      options:
+        format: "timestamp-seconds"
+  moderation: true
+  name: "KiwiChat Blog"
+  requiredFields: ["name", "email", "message", "codeword"]
+  transforms:
+    email: md5
