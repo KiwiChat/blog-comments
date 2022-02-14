@@ -1,6 +1,6 @@
 comments:
   # (*) REQUIRED
-  allowedFields: ["name", "email", "url", "message", "replyto", "codeword"]
+  allowedFields: ["name", "email", "url", "message", "replyto", "codeword", "subdomain"]
   branch: "master"
   filename: "{fields.replyto}entry{@timestamp}"
   path: "_data/comments/{options.slug}"
