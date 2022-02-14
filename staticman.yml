@@ -14,7 +14,7 @@ comments:
     date:
       type: date
       options:
-        format: "timestamp-seconds"
+        format: "yyyy-MM-dd"
   moderation: true
   name: "KiwiChat Blog"
   requiredFields: ["name", "email", "message", "codeword"]
