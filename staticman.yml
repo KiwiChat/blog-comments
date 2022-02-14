@@ -2,12 +2,12 @@ comments:
   # (*) REQUIRED
   allowedFields: ["name", "email", "url", "message", "replyto", "codeword", "subdomain"]
   branch: "master"
-  filename: "{fields.replyto}entry{@timestamp}"
+  filename: "{fields.replyto}{fields.name}{@timestamp}"
   path: "_data/comments/{options.slug}"
     
   # (*) OPTIONAL?
   commitMessage: "Add Staticman comment from {fields.name} at {fields.url}"
-  format: "yaml"
+  format: "json"
   allowedOrigins: ["kiwichat.ml"]
   bannedDomains: ["https://bit.ly"]
   generatedFields:
